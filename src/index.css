@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-50: 0.995 0.003 110;
+  --background-100: 0.98 0.006 110;
+  --background-200: 0.955 0.01 110;
+  --background-300: 0.92 0.014 110;
+  --background-400: 0.86 0.016 110;
+  --background-500: 0.78 0.016 110;
+  --background-600: 0.68 0.015 110;
+  --background-700: 0.56 0.013 110;
+  --background-800: 0.44 0.011 110;
+  --background-900: 0.33 0.009 110;
+  --background-950: 0.22 0.008 110;
+
+  --foreground-50: 0.97 0.003 150;
+  --foreground-100: 0.93 0.004 150;
+  --foreground-200: 0.87 0.005 150;
+  --foreground-300: 0.78 0.006 150;
+  --foreground-400: 0.66 0.007 150;
+  --foreground-500: 0.55 0.008 150;
+  --foreground-600: 0.46 0.01 150;
+  --foreground-700: 0.38 0.011 150;
+  --foreground-800: 0.3 0.012 150;
+  --foreground-900: 0.23 0.012 150;
+  --foreground-950: 0.16 0.01 150;
+
+  --primary-50: 0.97 0.03 150;
+  --primary-100: 0.94 0.06 150;
+  --primary-200: 0.88 0.1 150;
+  --primary-300: 0.8 0.14 150;
+  --primary-400: 0.68 0.16 150;
+  --primary-500: 0.55 0.15 150;
+  --primary-600: 0.47 0.14 150;
+  --primary-700: 0.39 0.12 150;
+  --primary-800: 0.31 0.1 150;
+  --primary-900: 0.25 0.08 150;
+  --primary-950: 0.17 0.06 150;
+
+  --accent-50: 0.98 0.04 100;
+  --accent-100: 0.96 0.08 100;
+  --accent-200: 0.93 0.13 100;
+  --accent-300: 0.89 0.16 100;
+  --accent-400: 0.86 0.18 100;
+  --accent-500: 0.85 0.18 100;
+  --accent-600: 0.76 0.16 95;
+  --accent-700: 0.63 0.14 90;
+  --accent-800: 0.5 0.11 85;
+  --accent-900: 0.4 0.09 82;
+  --accent-950: 0.28 0.07 80;
+
+  --secondary-50: 0.97 0.012 80;
+  --secondary-100: 0.94 0.02 78;
+  --secondary-200: 0.89 0.03 76;
+  --secondary-300: 0.82 0.045 74;
+  --secondary-400: 0.72 0.06 72;
+  --secondary-500: 0.62 0.07 70;
+  --secondary-600: 0.52 0.07 68;
+  --secondary-700: 0.43 0.06 64;
+  --secondary-800: 0.34 0.05 62;
+  --secondary-900: 0.27 0.045 60;
+  --secondary-950: 0.18 0.035 58;
+
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --background-50: 0.19 0.012 150;
+  --background-100: 0.23 0.014 150;
+  --background-200: 0.28 0.016 150;
+  --background-300: 0.34 0.018 150;
+  --background-400: 0.42 0.018 150;
+  --background-500: 0.52 0.016 150;
+  --background-600: 0.62 0.014 150;
+  --background-700: 0.72 0.012 150;
+  --background-800: 0.83 0.01 150;
+  --background-900: 0.92 0.008 150;
+  --background-950: 0.98 0.004 150;
+
+  --foreground-50: 0.16 0.01 150;
+  --foreground-100: 0.23 0.012 150;
+  --foreground-200: 0.3 0.012 150;
+  --foreground-300: 0.4 0.012 150;
+  --foreground-400: 0.52 0.01 150;
+  --foreground-500: 0.64 0.008 150;
+  --foreground-600: 0.74 0.007 150;
+  --foreground-700: 0.82 0.006 150;
+  --foreground-800: 0.88 0.005 150;
+  --foreground-900: 0.93 0.004 150;
+  --foreground-950: 0.97 0.003 150;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: oklch(var(--background-50));
+  color: oklch(var(--foreground-950));
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-soft-float {
+  animation: soft-float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0.5); }
+  70% { box-shadow: 0 0 0 16px oklch(var(--primary-500) / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.2s infinite;
+}
