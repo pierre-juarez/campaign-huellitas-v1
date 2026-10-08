@@ -7,8 +7,8 @@ export default function RegistrationCTA() {
       <div className="w-full px-4 md:px-8 max-w-5xl mx-auto">
         <Reveal>
           <div className="relative overflow-hidden bg-primary-600 rounded-3xl px-6 py-12 md:px-14 md:py-16 text-center">
-            <div className="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-accent-500/25 blur-2xl" />
-            <div className="absolute -left-16 -bottom-16 w-56 h-56 rounded-full bg-accent-400/20 blur-2xl" />
+            <div className="absolute -right-16 -top-16 w-56 h-56 rounded-full glow-accent-soft" />
+            <div className="absolute -left-16 -bottom-16 w-56 h-56 rounded-full glow-accent-lighter" />
 
             <div className="relative">
               <span className="inline-flex items-center gap-2 bg-accent-500 text-accent-950 text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full">

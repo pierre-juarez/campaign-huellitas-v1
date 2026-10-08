@@ -3,11 +3,14 @@ import {
   PRICE_CATS,
   PRICE_DOGS,
   WHATSAPP_URL,
-} from '@/pages/home/campaignData';
+} from "@/pages/home/campaignData";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative pt-24 md:pt-28 pb-12 md:pb-20 bg-background-50 overflow-hidden">
+    <section
+      id="inicio"
+      className="relative pt-24 md:pt-28 pb-12 md:pb-20 bg-background-50 overflow-hidden"
+    >
       <div className="absolute -top-24 -right-24 w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary-100/60 blur-3xl" />
       <div className="absolute bottom-0 -left-24 w-64 h-64 md:w-80 md:h-80 rounded-full bg-accent-100/60 blur-3xl" />
 
@@ -23,25 +26,34 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-base md:text-lg text-foreground-700 max-w-xl">
-            Una oportunidad para cuidar la salud de tu mascota y contribuir al bienestar animal.
+            Una oportunidad para cuidar la salud de tu mascota y contribuir al
+            bienestar animal.
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-2 bg-primary-500 text-background-50 px-5 py-3 rounded-lg">
-              <i className="ri-calendar-2-line text-xl" />
-              <span className="font-heading font-bold text-lg md:text-xl">{CAMPAIGN_DATE}</span>
-            </div>
-            <div className="flex items-center gap-2 bg-background-100 border border-background-200 px-4 py-3 rounded-lg">
-              <i className="ri-heart-pulse-line text-primary-600" />
-              <span className="text-sm font-semibold text-foreground-800">
-                Perros: <span className="text-primary-700">{PRICE_DOGS}</span>
+          <div className="mt-6 space-y-3">
+            <div className="inline-flex items-center gap-3 bg-primary-500 text-background-50 px-5 py-2.5 rounded-lg">
+              <i className="ri-calendar-2-line text-2xl" />
+              <span className="font-heading font-bold text-lg md:text-xl">
+                {CAMPAIGN_DATE}
               </span>
             </div>
-            <div className="flex items-center gap-2 bg-background-100 border border-background-200 px-4 py-3 rounded-lg">
-              <i className="ri-heart-3-line text-accent-700" />
-              <span className="text-sm font-semibold text-foreground-800">
-                Gatos: <span className="text-accent-800">{PRICE_CATS}</span>
-              </span>
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2 bg-background-100 border border-background-200 px-4 py-3 rounded-lg">
+                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-100 text-primary-700 text-lg">
+                  🐶
+                </span>
+                <span className="text-sm font-semibold text-foreground-800">
+                  Perros: <span className="text-primary-700">{PRICE_DOGS}</span>
+                </span>
+              </div>
+              <div className="flex items-center gap-2 bg-background-100 border border-background-200 px-4 py-3 rounded-lg">
+                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-accent-100 text-accent-800 text-lg">
+                  🐱
+                </span>
+                <span className="text-sm font-semibold text-foreground-800">
+                  Gatos: <span className="text-accent-800">{PRICE_CATS}</span>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -80,7 +92,9 @@ export default function Hero() {
             </span>
             <span className="leading-tight">
               <span className="block text-xs text-foreground-600">Cupos</span>
-              <span className="block font-heading font-bold text-foreground-950 text-sm">Limitados</span>
+              <span className="block font-heading font-bold text-foreground-950 text-sm">
+                Limitados
+              </span>
             </span>
           </div>
         </div>

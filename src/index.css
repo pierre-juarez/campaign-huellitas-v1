@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,9 +64,9 @@
   --secondary-900: 0.27 0.045 60;
   --secondary-950: 0.18 0.035 58;
 
-  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-label: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 .dark {
@@ -106,14 +106,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--font-heading);
 }
 
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal.is-visible {
@@ -121,9 +127,48 @@ h1, h2, h3, h4, h5 {
   transform: none;
 }
 
+/* Soft glows using real radial gradients instead of filter: blur().
+   Blur filters inside rounded overflow-hidden containers can shimmer/vibrate. */
+.glow-primary {
+  background: radial-gradient(
+    circle at center,
+    oklch(var(--primary-100) / 0.65),
+    transparent 70%
+  );
+}
+
+.glow-accent {
+  background: radial-gradient(
+    circle at center,
+    oklch(var(--accent-100) / 0.65),
+    transparent 70%
+  );
+}
+
+.glow-accent-soft {
+  background: radial-gradient(
+    circle at center,
+    oklch(var(--accent-500) / 0.28),
+    transparent 70%
+  );
+}
+
+.glow-accent-lighter {
+  background: radial-gradient(
+    circle at center,
+    oklch(var(--accent-400) / 0.2),
+    transparent 70%
+  );
+}
+
 @keyframes soft-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-soft-float {
@@ -131,9 +176,15 @@ h1, h2, h3, h4, h5 {
 }
 
 @keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0.5); }
-  70% { box-shadow: 0 0 0 16px oklch(var(--primary-500) / 0); }
-  100% { box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0); }
+  0% {
+    box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px oklch(var(--primary-500) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(var(--primary-500) / 0);
+  }
 }
 
 .animate-pulse-ring {
