@@ -4,7 +4,7 @@ import {
   ORG_SUBTITLE,
   WHATSAPP_NUMBER_DISPLAY,
   WHATSAPP_URL,
-} from '@/pages/home/campaignData';
+} from "@/pages/home/campaignData";
 
 export default function Footer() {
   return (
@@ -20,12 +20,17 @@ export default function Footer() {
                 className="w-14 h-14 rounded-full object-cover"
               />
               <span className="leading-tight text-left">
-                <span className="block font-heading font-bold text-background-50">{ORG_NAME}</span>
-                <span className="block text-xs text-background-50/70">{ORG_SUBTITLE}</span>
+                <span className="block font-heading font-bold text-background-50">
+                  {ORG_NAME}
+                </span>
+                <span className="block text-xs text-background-50/70">
+                  {ORG_SUBTITLE}
+                </span>
               </span>
             </div>
             <p className="mt-5 text-sm text-background-50/70 leading-relaxed">
-              Por una vida más responsable, saludable y llena de amor para nuestros animales. 🐾
+              Por una vida más responsable, saludable y llena de amor para
+              nuestros animales. 🐾
             </p>
           </div>
 
@@ -47,9 +52,18 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-background-50/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-background-50/60">
           <span>
-            © {new Date().getFullYear()} {ORG_NAME}. Todos los derechos reservados.
+            © {new Date().getFullYear()} {ORG_NAME}. Todos los derechos
+            reservados.
           </span>
-          <span>Campaña social de esterilización · {ORG_SUBTITLE}</span>
+          <a
+            href="https://pierrejuarez.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 hover:text-background-50 transition-colors cursor-pointer"
+          >
+            Hecho con <span className="text-accent-400">❤️</span> por Pierre
+            Juarez
+          </a>
         </div>
       </div>
     </footer>
